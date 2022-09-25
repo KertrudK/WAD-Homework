@@ -4,13 +4,14 @@
     font-size: 20px;
     --greyMain: #aaa;
     --greyPost: #ccc;
+    --greyPostSub: #eee;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Roboto;
+    font-family: Roboto, Futura, Arial, sans-serif;
     font-weight: 500;
 }
 body {
@@ -84,11 +85,19 @@ article {
     background-color: var(--greyPost);
 }
 
+article:nth-child(even) {
+    background-color: var(--greyPostSub);
+}
+
 .postHeader {
     margin-bottom: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.postHeader a ~ div {
+    font-size: .9rem;
 }
 
 .userIcon {
@@ -112,6 +121,8 @@ article {
     width: 30px;
     height: 25px;
     cursor: pointer;
+    border: none;
+    background-color: inherit;
     background-image: url("../images/like.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -128,7 +139,7 @@ footer {
     padding: 1rem;
     border-radius: 20px;
     background-color: var(--greyMain);
-    font-size: 2rem;
+    font-size: .75rem;
     text-align: center;
 }
 
