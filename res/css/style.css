@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+    font-size: 20px;
+    --greyMain: #aaa;
+    --greyPost: #ccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto;
+    font-weight: 500;
+}
+body {
+    padding: 0.5rem;
+}
+body > * {
+    max-width: 1200px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: 20px;
+    background-color: var(--greyMain);
+}
+
+header a {
+    padding: 0 0.5rem;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: background-color .5s;
+}
+
+header a:hover {
+    background-color: #afeeee;
+}
+
+header a + div {
+    display: inline-block;
+    font-size: 1.5rem;
+    user-select: none;
+}
+
+#loginBtn {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-image: url("../images/profile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    color: #222;
+}
+
+.sideBlock {
+    min-width: 150px;
+    border-radius: 20px;
+    background-color: var(--greyMain);
+}
+
+.middleBlock {
+    margin: 0 2rem;
+}
+
+article {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: var(--greyPost);
+}
+
+.postHeader {
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.userIcon {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-image: url("../images/profile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.media {
+    width: 100%;
+}
+
+.text {
+    margin: 0.25rem 0;
+}
+
+.likeBtn {
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    background-image: url("../images/like.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: scale(1);
+    transition: transform 0.1s;
+}
+
+.likeBtn:active {
+    transform: scale(0.75);
+}
+
+footer {
+    margin-top: 0.5rem;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: var(--greyMain);
+    font-size: 2rem;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    .sideBlock {
+        display: none;
+    }
+    .middleBlock {
+        margin: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    header a, .header a + div {
+        font-size: 1rem;
+    }
+    #loginBtn {
+        width: 40px;
+        height: 40px;
+    }
+}
