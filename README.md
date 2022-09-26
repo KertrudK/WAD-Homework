@@ -8,4 +8,4 @@ Homework #1 -> Deadline 2 October 2022, 23:59
 - Vitali Zaikov
 - Kertrud Geddily Küüt 
 
-Team number 43
+Group AF in Moodle (team 43 in Excel)
