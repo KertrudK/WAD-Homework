@@ -1,0 +1,87 @@
+body {
+    margin: 5;
+    padding: 0 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem;
+    border-radius: 10px;
+    background-color: #b0a1bd ;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.75);
+}
+
+header a {
+    padding:  .5rem;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+}
+
+header a:hover {
+    background-color: #a662bb;
+}
+
+#ProfilePic {
+    display: block;
+    height: 50px;
+    width: 50px;
+    background-image: url("../images/profile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.center-box {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 0; 
+    justify-content: space-evenly;
+}
+
+.content {
+    background-color: rgb(210, 207, 211);
+    width: 400px;
+    height: 450px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+div strong {
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+}
+
+.login-button {
+    margin: 10px 10% 0 25%;
+    background-color: rgb(43, 43, 153);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #517ced;
+}
+
+.login-button~a {
+    color: crimson;
+}
+
+.content p {
+    margin: 25px 0 0 0;
+    
+}
+
+p::first-line {
+    font-size:x-large;
+}
+  
