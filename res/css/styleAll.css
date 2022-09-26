@@ -1,0 +1,68 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+    font-size: 20px;
+    --greyMain: #aaa;
+    --greyPost: #ccc;
+    --greyPostSub: #eee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Futura, Arial, sans-serif;
+    font-weight: 500;
+}
+body {
+    padding: 0.5rem;
+}
+body > * {
+    width:100%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: 20px;
+    background-color: var(--greyMain);
+}
+
+header a {
+    padding: 0 0.5rem;
+    display: inline-block;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: background-color .5s;
+}
+
+header a:hover {
+    background-color: #afeeee;
+}
+
+
+#loginBtn {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-image: url("../images/profile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+article {
+    width: 66%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: var(--greyPostSub);
+}
+
+
