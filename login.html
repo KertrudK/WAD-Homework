@@ -7,34 +7,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to postIt</title>
     <link rel="stylesheet" type="text/css" href="res/css/login.css">
+    <link rel="stylesheet" type="text/css" href="res/css/styleAll.css">
 </head>
+
 <body>
     <header>
         <div>
-            <a href="login.html"> Home</a>
+            <a href="index.html"> Home</a>
         </div>
-            <div><a href="login.html" id="ProfilePic"></a></div>
-        
+        <div><a href="login.html" id="ProfilePic"></a></div>
+
     </header>
-    <div class="center-box">
-        <div class="content">
-        <br>
-        <strong> Welcome to PostIt!</strong>
-        <br>
-        <a href="login.html">Create an account</a>
-        <p> Or </p>
-        <h3>Please Log In</h3>
-        <form action="index.html" method="get">
-            <input type="text" placeholder="Email" required="required">
-            <br></br>
-            <input type="password" placeholder="Password" required="required"  >
-            <br></br>
-            <input type="submit" class="login-button" value="Log In">
-        </form>
-        <br>
-        <a href="login.html">Forgot your password?</a>
-    </div>
-    </div>
+    <main>
+        <div class="sideBlock"></div>
+        <div class="middleBlock">
+            <div class="center-box">
+                <article>
+                    <div class="content">
+                        <br>
+                        <strong> Welcome to PostIt!</strong>
+                        <br>
+                        <a href="login.html">Create an account</a>
+                        <p> Or </p>
+                        <h3>Please Log In</h3>
+                        <form action="index.html" method="get">
+                            <input type="text" placeholder="Email" required="required">
+                            <br></br>
+                            <input type="password" placeholder="Password" required="required">
+                            <br></br>
+                            <input type="submit" class="login-button" value="Log In">
+                        </form>
+                        <br>
+                        <a href="login.html">Forgot your password?</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="sideBlock"></div>
+    </main>
 </body>
 
 </html>
