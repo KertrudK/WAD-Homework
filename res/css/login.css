@@ -46,7 +46,6 @@ header a:hover {
 
 .content {
     background-color: rgb(210, 207, 211);
-    width: 400px;
     height: 450px;
     display: flex;
     flex-direction:column;
