@@ -15,9 +15,17 @@
     font-family: Roboto, Futura, Arial, sans-serif;
     font-weight: 500;
 }
+main {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    color: #222;
+}
+
 body {
     padding: 0.5rem;
 }
+
 body > * {
     width:100%;
     margin: 0 auto;
@@ -56,8 +64,19 @@ header a:hover {
     background-repeat: no-repeat;
 }
 
+.sideBlock {
+    border: 2px solid red;
+    min-width: 150px;
+    border-radius: 20px;
+}
+
+.middleBlock {
+    border: 2px solid red;
+    margin: 0 2rem;
+}
+
 article {
-    width: 66%;
+    border: 2px solid red;
     margin-top: 2rem;
     margin-bottom: 1rem;
     padding: 1rem;
