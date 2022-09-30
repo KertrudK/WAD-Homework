@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="res/css/styleAll.css">
     <link rel="stylesheet" href="res/css/addPost.css" />
-    <title>Home</title>
+    <title>Add Post</title>
 </head>
 
 <body>
@@ -18,16 +18,31 @@
         <div><a href="login.html" id="loginBtn"></a></div>
     </header>
     <main>
-        
-            <div class="sideBlock"></div>
-            <div class="middleBlock">
-                <article>
+
+        <div class="sideBlock"></div>
+        <div class="middleBlock">
+            <article>
+                <div class="upperArea">
+                    <div class="text">Enter your message:)</div>
+                    <textarea></textarea>
+                </div>
+                <div class="upperArea">
                     <div class="text">
-                        see siin on article:)
+                        Select file
                     </div>
-                </article>
+                    <form action="">
+                        <input type="file">
+                    </form>
+                </div>
+                <div class="downerArea">
+                <form action="index.html" method="get">
+                    <input type="submit" class="createPostButton" value="Create post">
+                </form>
             </div>
-            <div class="sideBlock"></div>
-        
+
+            </article>
+        </div>
+        <div class="sideBlock"></div>
+
     </main>
 </body>

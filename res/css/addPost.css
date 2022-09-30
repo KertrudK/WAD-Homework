@@ -1,0 +1,35 @@
+.upperArea {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.downerArea {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+input[type="file"] {
+    color: transparent;
+}
+
+::file-selector-button {
+    background-color: var(--greyMain);
+    cursor: pointer;
+}
+
+.createPostButton {
+    margin: 10px 10% 0 25%;
+    background-color: rgb(43, 43, 153);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.createPostButton:hover {
+    background-color: #517ced;
+}

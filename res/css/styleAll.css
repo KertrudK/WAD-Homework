@@ -66,20 +66,20 @@ header a:hover {
 }
 
 .sideBlock {
-    border: 2px solid red;
+    border: 2px;
     min-width: 150px;
     border-radius: 20px;
 }
 
 .middleBlock {
     width: 100%;
-    border: 2px solid red;
+    border: 2px;
     margin: 0 2rem;
 }
 
 article {
     width: 100%;
-    border: 2px solid red;
+    border: 2px;
     margin-top: 2rem;
     margin-bottom: 1rem;
     padding: 1rem;
