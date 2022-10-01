@@ -87,4 +87,15 @@ article {
     background-color: var(--greyPostSub);
 }
 
+.media {
+    width: 100%;
+}
 
+@media (max-width: 800px) {
+    .sideBlock {
+        display: none;
+    }
+    .middleBlock {
+        margin: 0;
+    }
+}

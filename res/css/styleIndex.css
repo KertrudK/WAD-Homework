@@ -36,9 +36,6 @@ main {
     background-repeat: no-repeat;
 }
 
-.media {
-    width: 100%;
-}
 
 .text {
     margin: 0.25rem 0;
@@ -68,15 +65,6 @@ footer {
     background-color: var(--greyMain);
     font-size: .75rem;
     text-align: center;
-}
-
-@media (max-width: 800px) {
-    .sideBlock {
-        display: none;
-    }
-    .middleBlock {
-        margin: 0;
-    }
 }
 
 @media (max-width: 400px) {

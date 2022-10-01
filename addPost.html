@@ -17,31 +17,28 @@
         </div>
         <div><a href="login.html" id="loginBtn"></a></div>
     </header>
-    <main>
 
+    <main>
         <div class="sideBlock"></div>
         <div class="middleBlock">
             <article>
-                <div class="upperArea">
-                    <div class="text">Enter your message:)</div>
-                    <div class="contentSeparator"></div>
-                    <textarea placeholder="Your message here"></textarea>
-                </div>
-                <div class="upperArea">
-                    <div class="text">
-                        Select file
+                <form action="index.html" method="post">
+                    <div class="upperArea">
+                        <div class="text">Enter your message:)</div>
+                        <div class="contentSeparator"></div>
+                        <textarea placeholder="Your message here"></textarea>
                     </div>
-                    <div class="contentSeparator" id="wider"></div>
-                    <form action="index.html">
-                        <input type="file">
-                    </form>
-                </div>
-                <div class="downerArea">
-                <form action="index.html" method="get">
-                    <input type="submit" class="createPostButton" value="Create post">
+                    <div class="upperArea">
+                        <div class="text">Select file</div>
+                        <div class="contentSeparator" id="wider"></div>
+                            <label for="submittedFile"></label>
+                            <input type="file" id="submittedFile">
+                    </div>
+                    <div class="downerArea">
+                        <label for="submittedText"></label>
+                        <input type="submit" id="submittedText" class="createPostButton" value="Create post">
+                    </div>
                 </form>
-            </div>
-
             </article>
         </div>
         <div class="sideBlock"></div>
