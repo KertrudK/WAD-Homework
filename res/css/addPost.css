@@ -1,37 +1,26 @@
-.upperArea {
+.inputArea {
     margin-top: 30px;
-    margin-left: 15px;
     display: flex;
-    justify-content:flex-start;
+    flex-direction: column;
 }
 
 textarea {
-    width: 60%;
-    height: max-content;
+    margin-top: 30px;
+    min-height: 120px;
     resize: vertical;
 }
 
-.contentSeparator {
-    display: flex;
-    width: 10%;
-}
-#wider {
-    width: 23%;
-}
-
-.downerArea {
-    margin-top: 30px;
-    display: flex;
-    justify-content: space-around;
-}
-
 ::file-selector-button {
+    margin: 30px auto;
+    padding: 3px;
     background-color: var(--greyMain);
     cursor: pointer;
 }
 
+
+
 .createPostButton {
-    margin: 10px 10% 0 25%;
+    margin: 30px auto;
     background-color: rgb(43, 43, 153);
     border: none;
     color: white;

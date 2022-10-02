@@ -32,6 +32,10 @@ body > * {
     margin: 0 auto;
 }
 
+.text {
+    margin: 0.25rem 0;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -55,6 +59,14 @@ header a:hover {
     background-color: #afeeee;
 }
 
+
+
+.postHeader {
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 #loginBtn {
     display: block;
