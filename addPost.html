@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="res/css/styleAll.css">
-    <link rel="stylesheet" href="res/css/addPost.css" />
+    <link rel="stylesheet" href="res/css/addPost.css">
     <title>Add Post</title>
 </head>
 
@@ -22,14 +22,18 @@
         <div class="sideBlock"></div>
         <div class="middleBlock">
             <article>
-                <form action="index.html" method="get">
+                <form action="index.html" method="post">
                     <div class="inputArea">
-                        <div class="text">Enter your thoughts:)</div>
-                        <textarea placeholder="Your message here"></textarea>
-                        <input type="file" id="submittedFile">
-                        <label for="submittedFile"></label>
+                        <div>
+                            <label class="text" for="postText">Enter your thoughts:)</label>
+                            <textarea id="postText" placeholder="Your message here" rows="10"></textarea>
+                        </div>
+                        <div>
+                            <div class="text">Select file</div>
+                            <input type="file" id="submittedFile">
+                            <label for="submittedFile">Choose File</label>
+                        </div>
                         <input type="submit" id="submittedText" class="createPostButton" value="Create post">
-                        <label for="submittedText"></label>
                     </div>
 
                 </form>

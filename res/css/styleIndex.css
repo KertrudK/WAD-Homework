@@ -64,12 +64,4 @@ footer {
     text-align: center;
 }
 
-@media (max-width: 400px) {
-    header a, .header a + div {
-        font-size: 1rem;
-    }
-    #loginBtn {
-        width: 40px;
-        height: 40px;
-    }
-}
+

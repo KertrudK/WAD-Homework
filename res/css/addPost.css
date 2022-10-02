@@ -3,21 +3,35 @@
     display: flex;
     flex-direction: column;
 }
+.inputArea > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
 
 textarea {
-    margin-top: 30px;
-    min-height: 120px;
+    width: 50%;
     resize: vertical;
 }
 
-::file-selector-button {
-    margin: 30px auto;
-    padding: 3px;
-    background-color: var(--greyMain);
-    cursor: pointer;
+input[type=file] {
+    display: none;
 }
 
+label[for=submittedFile] {
+    display: block;
+    cursor: pointer;
+    background-color: var(--greyMain);
+    color: #fff;
+    padding: .5rem;
+    border: 1px solid #000;
+}
 
+label[for=submittedFile]:hover {
+    background-color: #000;
+    border-color: #fff;
+}
 
 .createPostButton {
     margin: 30px auto;
@@ -31,4 +45,14 @@ textarea {
 
 .createPostButton:hover {
     background-color: #517ced;
+}
+
+@media (max-width: 800px) {
+    .inputArea > div:nth-child(1) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    textarea {
+        width: 100%;
+    }
 }
