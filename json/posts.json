@@ -1,0 +1,152 @@
+[
+    {
+        "create_time":  {
+            "date": "Oct 19, 2022",
+            "time": "14:45"
+        },
+        "author":{
+            "firstname": "Lilibet",
+            "lastname": "Trull"
+        },
+        "content": {
+            "post_text": "I'm a fighter, Not a quitter!",
+            "post_image": "https://images.pexels.com/photos/4427610/pexels-photo-4427610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        }
+    },
+
+    {
+        "create_time":  {
+            "date": "Oct 20, 2022",
+            "time": "10:45"
+        },
+        "author":{
+            "firstname": "Lilibet",
+            "lastname": "Trull"
+        },
+        "content": {
+            "post_text": "It is my time to leave, was fun.",
+            "post_image": "https://images.pexels.com/photos/3885529/pexels-photo-3885529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        }
+    },
+
+    {
+        "create_time":  {
+            "date": "Oct 10, 2022",
+            "time": "10:45"
+        },
+        "author":{
+            "firstname": "Albert",
+            "lastname": "Einstein"
+        },
+        "content": {
+            "post_text": "The only reason for time is so that everything doesn't happen at once."
+        }
+    },
+
+    {
+        "create_time":  {
+            "date": "Sep 25, 2022",
+            "time": "18:17"
+        },
+        "author":{
+            "firstname": "Sandra",
+            "lastname": "Carr"
+        },
+        "content": {
+            "post_text": "Working from home",
+            "post_image": "https://images.pexels.com/photos/4680375/pexels-photo-4680375.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+         }
+    },
+
+    {
+        "create_time":  {
+            "date": "Oct 7, 2022",
+            "time": "10:45"
+        },
+        "author":{
+            "firstname": "Michaël",
+            "lastname": "Schneider"
+        },
+        "content": {
+            "post_text": "Best BAND EVERRRR!!!!!",
+            "post_image": "https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        }
+    },
+
+    {
+        "create_time":  {
+            "date": "Oct 13, 2022",
+            "time": "7:02"
+        },
+        "author":{
+            "firstname": "Stefani",
+            "lastname": "Landers"
+        },
+        "content": {
+            "post_text": "He is so cute while sleeping #LoveMyCat ",
+            "post_image": "https://images.pexels.com/photos/799462/pexels-photo-799462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+
+        }
+    },
+
+    {
+        "create_time":  {
+            "date": "Oct 1, 2022",
+            "time": "7:34"
+        },
+        "author":{
+            "firstname": "Henry",
+            "lastname": "Clarkson"
+        },
+        "content": {
+            "post_text": "Hello October, time to go to do some work",
+            "post_image": "https://images.pexels.com/photos/13865604/pexels-photo-13865604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+
+        }
+    },
+
+    {
+        "create_time":  {
+            "date": "Oct 5, 2022",
+            "time": "16:29"
+        },
+        "author":{
+            "firstname": "Maggie",
+            "lastname": "Kuhn"
+        },
+        "content": {
+            "post_text": "Speak your mind, even if your voice shakes"
+
+        }
+    },
+    
+    {
+        "create_time":  {
+            "date": "Sep 27, 2022",
+            "time": "17:27"
+        },
+        "author":{
+            "firstname": "Margaret",
+            "lastname": "Mead"
+        },
+        "content": {
+            "post_text": "Always remember that you are absolutely unique. Just like everyone else."  
+        }
+    },
+
+    {
+        "create_time":  {
+            "date": "Sep 2, 2022",
+            "time": "18:21"
+        },
+        "author":{
+            "firstname": "Laura",
+            "lastname": "Smith"
+        },
+        "content": {
+            "post_text": "Enjoying my night in italy ",
+            "post_image": "https://images.pexels.com/photos/821069/pexels-photo-821069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+
+        }
+    }
+]
