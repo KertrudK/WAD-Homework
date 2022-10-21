@@ -52,7 +52,6 @@
 //                 postBox.appendChild(likeBtn);
 //                 postsContainer.appendChild(postBox);
 //             }
-//             postsContainer.removeChild(document.querySelector(".loading"));
 //         })
 //         .catch((err) => {
 //             const postsContainer = document.querySelector(".middleBlock");
@@ -61,6 +60,9 @@
 //             errorMsg.textContent = "Something went wrong while loading content";
 //             postsContainer.appendChild(errorMsg);
 //             console.log(err);
+//         }).finally(() => {
+//             const postsContainer = document.querySelector(".middleBlock");
+//             postsContainer.removeChild(document.querySelector(".loading"));
 //         });
 // };
 
