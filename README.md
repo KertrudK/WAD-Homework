@@ -13,5 +13,7 @@ Group AF in Moodle (team 43 in Excel)
 
 
 ## Homework 2  
+Storing JSON file : https://api.jsonbin.io/v3/b/635269ba2b3499323be5f258  
 JSON Validator used -> https://jsonbin.io/json-validator  
-![JSON Validator](https://i.imgur.com/VSSHxvc.png)
+![JSON Validator](https://i.imgur.com/VSSHxvc.png)  
+ 
