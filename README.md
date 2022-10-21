@@ -14,4 +14,4 @@ Group AF in Moodle (team 43 in Excel)
 
 ## Homework 2  
 JSON Validator used -> https://jsonbin.io/json-validator  
-![JSON Validator](https://imgur.com/a/ELaVXF7)
+![JSON Validator](https://i.imgur.com/VSSHxvc.png)
