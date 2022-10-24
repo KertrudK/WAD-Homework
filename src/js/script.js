@@ -132,6 +132,12 @@ window.onload = function () {
         });
 };
 
+function addShowCssToDropdownMenu() {
+    var element = document.getElementsByTagName("LI");
+    element.classList.add("show");
+}
+
 function openDropdownMenu() {
-    document.getElementById('#userOptions').getElementsByClassName("li").toggle("show");
+    addShowCssToDropdownMenu();
+    document.getElementsByTagName("LI").toggle("show");
 }
