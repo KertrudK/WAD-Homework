@@ -132,12 +132,7 @@ window.onload = function () {
         });
 };
 
-function addShowCssToDropdownMenu() {
-    var element = document.getElementsByTagName("LI");
-    element.classList.add("show");
-}
-
+document.getElementById("userOptions").addEventListener("click", openDropdownMenu);
 function openDropdownMenu() {
-    addShowCssToDropdownMenu();
-    document.getElementsByTagName("LI").toggle("show");
+    document.querySelector(".menu").toggle(".show");
 }
