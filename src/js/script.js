@@ -134,5 +134,5 @@ window.onload = function () {
 
 document.getElementById("userOptions").addEventListener("click", openDropdownMenu);
 function openDropdownMenu() {
-    document.querySelector(".menu").toggle(".show");
+    document.querySelector(".menu").classList.toggle("show");
 }
