@@ -17,8 +17,19 @@
             <div class="separator">|</div>
             <a href="addPost.html">addPost</a>
         </div>
-        <div><a href="login.html" id="loginBtn"></a></div>
+    
+        <!--https://www.w3schools.com/howto/howto_js_dropdown.asp--> 
+        <!--https://alvarotrigo.com/blog/drop-down-menu-javascript/-->
+        <nav>
+            <ul><button id="userOptions" onclick="openDropdownMenu()">
+                <li hidden>YOUR NAME</li>
+                <li hidden>YOUR EMAIL</li>
+                <li hidden><a href="login.html">LOGIN/LOGOUT?</a></li>
+            </ul>
+        </nav>
+
     </header>
+
     <main>
         <div class="sideBlock"></div>
         <div class="middleBlock">

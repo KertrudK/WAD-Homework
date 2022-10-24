@@ -131,3 +131,7 @@ window.onload = function () {
             postsContainer.removeChild(document.querySelector(".loading"));
         });
 };
+
+function openDropdownMenu() {
+    document.getElementById('#userOptions').getElementsByClassName("li").toggle("show");
+}
