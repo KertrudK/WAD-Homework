@@ -76,12 +76,16 @@ header a:hover {
     background-repeat: no-repeat;
 }
 
-nav {
+.menu {
     position: relative;
     display: inline-block;
+    background-color: rebeccapurple;
 }
 
-.show {display:block}
+.show {
+    display:block;
+    background-color: red;
+}
 
 
 .sideBlock {
