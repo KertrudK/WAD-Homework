@@ -11,6 +11,15 @@ main {
     color: #222;
 }
 
+#userOptions {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-image: url("../images/profile.png");
+    background-size: cover;
+    background-repeat: no-repeat;    
+}
+
 .hiddenMenu { 
     display: none;
 }

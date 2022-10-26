@@ -67,16 +67,6 @@ header a:hover {
     align-items: center;
 }
 
-#userOptions {
-    display: block;
-    width: 70px;
-    height: 70px;
-    background-image: url("../images/profile.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    
-}
-
 .sideBlock {
     border: 2px;
     min-width: 150px;
