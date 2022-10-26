@@ -74,16 +74,18 @@ header a:hover {
     background-image: url("../images/profile.png");
     background-size: cover;
     background-repeat: no-repeat;
+    
 }
 
-.menu {
-    position: relative;
-    display: inline-block;
-    background-color: rebeccapurple;
+.hiddenMenu { 
+    display: none;
 }
 
-.show {
-    display:block;
+.show { /*styles the dropdown menu when it's visible*/
+    display: block;
+    position: absolute;
+    transform: translateX(-100%);
+    margin-left: 70px;
     background-color: red;
 }
 
