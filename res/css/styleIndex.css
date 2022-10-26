@@ -17,7 +17,9 @@ main {
     height: 70px;
     background-image: url("../images/profile.png");
     background-size: cover;
-    background-repeat: no-repeat;    
+    background-repeat: no-repeat;  
+    border-radius: 7px; 
+    cursor: pointer; 
 }
 
 .hiddenMenu { 
@@ -25,13 +27,21 @@ main {
 }
 
 .show { /*styles the dropdown menu when it's visible*/
-    display: block;
+    display: inline-block;
     position: absolute;
     transform: translateX(-100%);
     margin-left: 70px;
-    background-color: red;
+    border-radius: 5%;
+    padding: 2%;
+    list-style: none;
+    overflow: auto;
+    background-color: var(--greyPost);
 }
 
+.show a {
+    font-size: 20px;
+    padding-left: 0%;
+}
 
 .sideBlock {
     background-color: var(--greyMain);
