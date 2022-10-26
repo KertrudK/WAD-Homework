@@ -11,6 +11,19 @@ main {
     color: #222;
 }
 
+.hiddenMenu { 
+    display: none;
+}
+
+.show { /*styles the dropdown menu when it's visible*/
+    display: block;
+    position: absolute;
+    transform: translateX(-100%);
+    margin-left: 70px;
+    background-color: red;
+}
+
+
 .sideBlock {
     background-color: var(--greyMain);
 }

@@ -77,19 +77,6 @@ header a:hover {
     
 }
 
-.hiddenMenu { 
-    display: none;
-}
-
-.show { /*styles the dropdown menu when it's visible*/
-    display: block;
-    position: absolute;
-    transform: translateX(-100%);
-    margin-left: 70px;
-    background-color: red;
-}
-
-
 .sideBlock {
     border: 2px;
     min-width: 150px;
