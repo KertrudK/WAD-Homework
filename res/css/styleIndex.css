@@ -18,6 +18,7 @@ main {
     background-image: url("../images/profile.png");
     background-size: cover;
     background-repeat: no-repeat;  
+    border: none; /* removes the click-effect */
     border-radius: 7px; 
     cursor: pointer; 
 }
@@ -32,15 +33,19 @@ main {
     transform: translateX(-100%);
     margin-left: 70px;
     border-radius: 5%;
-    padding: 2%;
+    padding: 1%;
     list-style: none;
     overflow: auto;
     background-color: var(--greyPost);
 }
 
+.show li {
+    padding: 1%;
+}
 .show a {
     font-size: 20px;
     padding-left: 0%;
+    padding-right: 0%;
 }
 
 .sideBlock {
