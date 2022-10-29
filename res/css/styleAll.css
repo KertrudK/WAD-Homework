@@ -2,9 +2,12 @@
 
 :root {
     font-size: 20px;
-    --greyMain: #aaa;
-    --greyPost: #ccc;
-    --greyPostSub: #eee;
+    --colorBody: #F9F9F9;
+    --colorHeaderFooter: #5AA9E6;
+    --colorSideBlock: #7FC8F8;
+    --colorPosts: #FFE45E;
+    --colorAccent: #FF6392;
+    /* https://coolors.co/7fc8f8-5aa9e6-f9f9f9-ffe45e-ff6392 */
 }
 
 * {
@@ -23,6 +26,7 @@ main {
 
 body {
     padding: 0.5rem;
+    background-color: var(--colorBody);
 }
 
 body > * {
@@ -41,7 +45,7 @@ header {
     align-items: center;
     padding: 0.75rem;
     border-radius: 20px;
-    background-color: var(--greyMain);
+    background-color: var(--colorHeaderFooter);
 }
 
 header a {
@@ -57,7 +61,6 @@ header a {
 header a:hover {
     background-color: #afeeee;
 }
-
 
 
 .postHeader {
@@ -87,7 +90,7 @@ article {
     margin-bottom: 1rem;
     padding: 1rem;
     border-radius: 20px;
-    background-color: var(--greyPostSub);
+    background-color: var(--colorPosts);
 }
 
 .media {

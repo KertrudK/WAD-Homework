@@ -21,7 +21,7 @@ div strong {
 
 .login-button {
     margin: 10px 10% 0 25%;
-    background-color: rgb(43, 43, 153);
+    background-color: var(--colorAccent);
     border: none;
     color: white;
     padding: 10px 20px;
@@ -30,7 +30,7 @@ div strong {
 }
 
 .login-button:hover {
-    background-color: #517ced;
+    background-color: var(--colorHeaderFooter);
 }
 
 .login-button~a {

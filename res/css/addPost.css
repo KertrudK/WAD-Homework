@@ -22,20 +22,20 @@ input[type=file] {
 label[for=submittedFile] {
     display: block;
     cursor: pointer;
-    background-color: var(--greyMain);
+    background-color: var(--colorAccent);
     color: #fff;
     padding: .5rem;
     border: 1px solid #000;
 }
 
 label[for=submittedFile]:hover {
-    background-color: #000;
+    background-color: var(--colorHeaderFooter);
     border-color: #fff;
 }
 
 .createPostButton {
     margin: 30px auto;
-    background-color: rgb(43, 43, 153);
+    background-color: var(--colorAccent);
     border: none;
     color: white;
     padding: 10px 20px;
@@ -44,7 +44,7 @@ label[for=submittedFile]:hover {
 }
 
 .createPostButton:hover {
-    background-color: #517ced;
+    background-color: var(--colorHeaderFooter);
 }
 
 @media (max-width: 800px) {
