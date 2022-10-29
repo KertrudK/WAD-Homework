@@ -1,3 +1,8 @@
+header {
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
 .inputArea {
     margin-top: 30px;
     display: flex;
@@ -25,20 +30,21 @@ label[for=submittedFile] {
     background-color: var(--colorAccent);
     color: #fff;
     padding: .5rem;
-    border: 1px solid #000;
+    border-radius: 5px;
+
 }
 
 label[for=submittedFile]:hover {
     background-color: var(--colorHeaderFooter);
-    border-color: #fff;
 }
 
 .createPostButton {
+    font-size: 20px;
     margin: 30px auto;
     background-color: var(--colorAccent);
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: .5rem;
     border-radius: 5px;
     cursor: pointer;
 }

@@ -59,7 +59,7 @@ header a {
 }
 
 header a:hover {
-    background-color: #afeeee;
+    background-color: var(--colorBody);
 }
 
 
@@ -74,6 +74,7 @@ header a:hover {
     border: 2px;
     min-width: 150px;
     border-radius: 20px;
+    margin-top: 1.3rem;
 }
 
 .middleBlock {
@@ -86,7 +87,7 @@ article {
     width: 100%;
     min-width: 300px;
     border: 2px;
-    margin-top: 2rem;
+    margin-top: 1.3rem;
     margin-bottom: 1rem;
     padding: 1rem;
     border-radius: 20px;
