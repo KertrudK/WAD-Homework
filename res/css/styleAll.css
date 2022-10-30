@@ -24,6 +24,12 @@ main {
     color: #222;
 }
 
+header a + div {
+    display: inline-block;
+    font-size: 1.5rem;
+    user-select: none;
+}
+
 body {
     padding: 0.5rem;
     background-color: var(--colorBody);
@@ -60,6 +66,44 @@ header a {
 
 header a:hover {
     background-color: var(--colorBody);
+}
+
+#userOptions {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-image: url("../images/profile.png");
+    background-size: cover;
+    background-repeat: no-repeat;  
+    border: none; /* removes the click-effect */
+    border-radius: 7px; 
+    cursor: pointer; 
+}
+
+.hiddenMenu { 
+    display: none;
+}
+
+.show { /*styles the dropdown menu when it's visible*/
+    display: inline-block;
+    position: absolute;
+    transform: translateX(-100%);
+    margin-left: 70px;
+    border-radius: 5%;
+    padding: 1%;
+    list-style: none;
+    overflow: auto;
+    background-color: var(--colorAccent);
+}
+
+.show li {
+    padding: 1%;
+}
+.show a {
+    font-size: 20px;
+    padding-left: 0%;
+    padding-right: 0%;
+    border-radius: 3px;
 }
 
 
