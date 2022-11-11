@@ -6,7 +6,7 @@
 			</h1> 
 			<ul>
 				<li><Developer name="Vitali Zaikov" /></li>
-				<li><Developer name="Helen Siil" /></li>
+				<li><Developer name="Helen Leikmaa" /></li>
 				<li><Developer name="Kertrud Geddily Küüt" /></li>
 			</ul>
 		</div>
