@@ -1,7 +1,8 @@
 # WAD-Homework
 
 Homework #1 -> Deadline 2 October 2022, 23:59  
-Homework #2 -> Deadline 30 October 2022, 23:59
+Homework #2 -> Deadline 30 October 2022, 23:59  
+Homework #3 -> Deadline 20 November 2022, 23:59
 
 
 ## Team members
