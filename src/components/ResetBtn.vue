@@ -13,8 +13,9 @@ export default {
         width: 100px;
         height: 50px;
         background-color: red;
-        position: fixed;
-        bottom: 0;
+        bottom: 20px;
+        right: 20px;
         cursor: pointer;
+        position: fixed;
     }
 </style>
