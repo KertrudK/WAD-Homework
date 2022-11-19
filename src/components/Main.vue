@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Post/>
+    <Post v-for="post in $store.state.posts" :post="post" :key="post.id"/>
   </div>
 </template>
 
