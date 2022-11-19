@@ -6,7 +6,7 @@
 	</div>
   </template>
   
-  <style scoped>
+  <style>
   .home {
 	padding-top: 11vh;
 	padding-bottom: 1vh;

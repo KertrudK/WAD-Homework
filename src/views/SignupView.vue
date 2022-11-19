@@ -1,6 +1,5 @@
 <template>
 	<div class="login">
-	  <Header/>
 	  <div class="content">
 	  <form action="index.html" method="post">
 		<p>Email</p>
@@ -12,10 +11,20 @@
 		<input type="submit" class="login-button" value="Signup">
 	  </form>
 	</div>
-	  <Footer/>
 	</div>
   </template>
 
+<script>
+import Header from '@/components/Header.vue';
+import Footer from '@/components/Footer.vue';
+
+export default {
+  name: 'SignUpView',
+  components: {
+	Header, Footer
+  }
+}
+</script>
   
   <style scoped>
   
