@@ -1,5 +1,6 @@
 <template>
-    <article v-for="post in $store.state.posts">
+  <!--https://masteringjs.io/tutorials/vue/elements-in-iteration-expect-to-have-v-bind-key-->
+    <article v-for="post in $store.state.posts" v-bind:key="post.id">
       <div class="header">
         <img class="avatar" :src="post.avatar" alt="User avatar"/>
         <p>{{post.date}}</p>
