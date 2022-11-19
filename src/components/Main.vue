@@ -10,7 +10,6 @@ import Post from "@/components/Post";
 export default {
   name: "Main",
   components: {Post}
-
 }
 </script>
 
@@ -22,9 +21,4 @@ div {
   gap: 1vh;
 }
 
-@media (max-width: 600px) {
-  div {
-    width: 95%;
-  }
-}
 </style>

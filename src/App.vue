@@ -4,6 +4,17 @@
 	<Footer/>
   </template>
   
+  
+  <script>
+  import Header from "@/components/Header";
+  import Footer from "@/components/Footer";
+  
+  export default {
+	components: {Header, Footer}
+  }
+  </script>
+
+
   <style>
   * {
 	margin: 0;
@@ -17,13 +28,16 @@
 	text-align: center;
 	color: #2c3e50;
   }
+
+  .home {
+	padding-top: 11vh;
+	padding-bottom: 1vh;
+	min-height: 78vh;
+	width: 100%;
+	display: flex;
+	gap: 5vw;
+	justify-content: space-around;
+  }
+  
   </style>
   
-  <script>
-  import Header from "@/components/Header";
-  import Footer from "@/components/Footer";
-  
-  export default {
-	components: {Header, Footer}
-  }
-  </script>
