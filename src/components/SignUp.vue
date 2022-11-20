@@ -23,7 +23,7 @@
 </template>
   
   <script>
-  import { passwordValidations } from "@/services/passwordValidations.js";
+  import passwordValidations from "@/services/passwordValidations.js";
 
   export default {
     name: "SignUp",
@@ -35,18 +35,21 @@
           formSubmitted: false
       };
     },
+    computed: {
+
+    },
+
     methods: {
       submitForm() {
         let validations = new passwordValidations(
           this.password
         );
-        errors = validations.checkEverything();
+        errors = validations.checkEverything(password);
         if (errors.length != 0) {
           return (false);
         }
         else {
           formSubmitted = true;
-          return true;
         }
 
       }

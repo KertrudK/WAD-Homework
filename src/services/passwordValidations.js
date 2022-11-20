@@ -4,11 +4,12 @@ export default class passwordValidations {
     constructor(password) {
         this.password = password
     }
+}
 
 
 
     /* https://www.w3resource.com/javascript/form/password-validation.php */
-    checkPasswordLength(password) {
+    function checkPasswordLength(password) {
         if (password.length >= 8 && password.length < 15)
         {
           return (true)
@@ -19,7 +20,7 @@ export default class passwordValidations {
         }
     }
 
-    checkPasswordLetters(password) {
+    function checkPasswordLetters(password) {
         if (/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])$/.test(password))
         {
             return true;
@@ -31,18 +32,18 @@ export default class passwordValidations {
 
     }
 
-    checkEverything(password) {
+    function checkEverything(password) {
         let errors = [];
         if (!checkPasswordLength(password)) {
             errors["length"] = errorBad;
         }
-        if (!this.checkPasswordLetters(password)) {
+        if (!checkPasswordLetters(password)) {
             errors["lowerUpper"] = errorBad;
         }
     
         return errors;
     }
-}
+
 
 /*
  Length (at least 8 chars and less than 15 chars). DONE
