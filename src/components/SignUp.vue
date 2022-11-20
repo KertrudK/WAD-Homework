@@ -44,7 +44,7 @@
         let validations = new passwordValidations(
           this.password
         );
-        errors = validations.checkEverything(password);
+        errors = validations.checkEverything(this.password);
         if (errors.length != 0) {
           return (false);
         }
