@@ -29,11 +29,11 @@
   
   a {
 	font-weight: bold;
-	color: #4F4846;
+	color: darkorange;
 	text-decoration: none;
   }
   
   a.router-link-exact-active {
-	color: #DDAF94;
+	color: #e8cebf;
   }
   </style>

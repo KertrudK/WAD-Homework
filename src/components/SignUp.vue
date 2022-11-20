@@ -1,8 +1,4 @@
 <template>
-    <!--https://vuejs.org/guide/essentials/forms.html
-  https://ahmedshaltout.com/vuejs/vue-3-login-with-vuex-tutorial/
-  https://www.w3resource.com/javascript/form/password-validation.php
-  -->
 
     <div class="home">
         <div class="center-box">
@@ -26,7 +22,7 @@
                         :class="{ error: !isValid && formSubmitted }"
                         required
                     />
-                    <div
+                   <div
                         class="forErrors"
                         :class="{ visible: !isValid && formSubmitted }"
                     >
@@ -36,17 +32,16 @@
                             >&#10060;</span
                         >
                         Invalid password.
+                        <br /> 
+                        Password length must be between 8 and 15 characters.
                         <br />
-                        Length (at least 8 chars and less than 15 chars).
+                        Password must include at least one uppercase and two lowercase letters.
                         <br />
-                        Includes at least one uppercase alphabet character; at
-                        least two lowercase alphabet characters;
+                        Password must include at least one numeric value.
                         <br />
-                        at least one numeric value;
+                        Password must start with an uppercase letter.
                         <br />
-                        It should start with an uppercase alphabet;
-                        <br />
-                        It should include the character “_”
+                        Password must include the character “_”
                     </div>
                 </label>
 
@@ -89,22 +84,14 @@ export default {
     },
 };
 
-/*
- Length (at least 8 chars and less than 15 chars). DONE
- Includes at least one uppercase alphabet character. 
- Includes at least two lowercase alphabet characters. 
- Includes at least one numeric value.
- It should start with an uppercase alphabet.
- It should include the character “_” 
-https://www.w3resource.com/javascript/form/password-validation.php */
 </script>
 
+  <!--https://vuejs.org/guide/essentials/forms.html
+  https://ahmedshaltout.com/vuejs/vue-3-login-with-vuex-tutorial/
+  https://www.w3resource.com/javascript/form/password-validation.php
+  -->
+
 <style scoped>
-/* TODO later at some point probablymaybe 
-  width: 60%;
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;  */
 
 .center-box {
     display: flex;
@@ -130,7 +117,7 @@ input {
 .login-button {
     font-size: 20px;
     margin: 10px 10% 0 25%;
-    background-color: green;
+    background-color: darkorange;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -140,13 +127,14 @@ input {
 }
 
 .login-button:hover {
-    background-color: darkgreen;
+    background-color: orange;
 }
 
 .forErrors {
     position: absolute;
+    justify-content: center;
     padding: 20px;
-    left: 200px;
+    margin: 20px;
     text-align: left;
     background-color: white;
     display: none;
@@ -158,7 +146,7 @@ input {
 
 .error {
     transition: border-color 1s;
-    border-color: red;
+    border-color:orangered;
 }
 
 .cross {
