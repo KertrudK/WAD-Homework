@@ -1,38 +1,57 @@
 <template>
-  <!--https://vuejs.org/guide/essentials/forms.html-->
+  <!--https://vuejs.org/guide/essentials/forms.html
+  https://ahmedshaltout.com/vuejs/vue-3-login-with-vuex-tutorial/
+  -->
   
 <div>
     <form @submit.prevent="submitForm" v-if="!formSubmitted">
-        <span>Enter your name</span> 
-        <input v-model="name" type = "text" placeholder="name" required/>
-        <span>Enter your e-mail</span>
-        <input v-model="email" type="email" placeholder="e-mail" required/>
+        <span>Enter your email</span> 
+        <input v-model.trim="email" type = "email" placeholder="email" required/>
+        <span>Enter your password</span>
+        <input v-model="text" type="password" placeholder="password" required/>
         <button type="Submit">Submit</button>
       </form> 
     </div>
 
   <div v-if="formSubmitted">
-        <p>Lovely!</p>
+        <span>Lovely!</span>
     </div>
+  <div v-if!="formSubmitted">
+      <span>I have to show errors here somehow</span> <!-- TODO -->
+  </div>
 
 </template>
   
   <script>
+  import { passwordValidations } from "../services/passwordValidations";
+
   export default {
     name: "SignUp",
     data() {
       return {
-          name: "",
           email: "",
+          password: "",
+          errors: [],
           formSubmitted: false
       };
     },
     methods: {
-      submitForm: function() {
-        this.formSubmitted = true
+      formSubmitted() {
+        let validations = new passwordValidations(
+          this.password
+        );
+        errors = validations.checkEverything();
+        if (errors.length != 0) {
+          return (false);
+        }
+        else {
+          return true;
+        }
+
       }
       },
   };
+
   </script>
   
 
