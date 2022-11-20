@@ -12,10 +12,20 @@ export default {
     .reset-btn {
         width: 100px;
         height: 50px;
-        background-color: red;
+        background-color: green;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 16px;
         bottom: 20px;
         right: 20px;
         cursor: pointer;
         position: fixed;
+    }
+
+    .reset-btn:hover
+    {
+        background-color: darkgreen;
     }
 </style>

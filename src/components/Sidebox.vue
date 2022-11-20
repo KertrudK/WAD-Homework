@@ -11,7 +11,7 @@ export default {
 <style scoped>
 .column {
   flex: 1;
-  background-color: #FDF8F5;
+  background-color: #f7ebe4;
   border-radius: 5px;
 }
 

@@ -4,29 +4,37 @@
   https://www.w3resource.com/javascript/form/password-validation.php
   -->
 
-    <div>
+
+      <div class="home">
+        <div class="center-box">
         <form @submit.prevent="submitForm">
             <span>Enter your email</span>
+            <br/>
             <input
                 v-model.trim="email"
                 type="email"
                 placeholder="email"
                 required
             />
+            <br/>
             <span>Enter your password</span>
+            <br/>
             <input
                 v-model="password"
                 type="password"
                 placeholder="password"
                 required
             />
-            <button type="Submit">Submit</button>
+            <br/>
+            <button class="login-button" type="Submit">Submit</button>
         </form>
+      </div>
     </div>
 
     <div class="forErrors" v-if="formSubmitted && !isValid">
+      <div class="center-box">
         Invalid password.
-        <br />
+        <br/>
         Length (at least 8 chars and less than 15 chars).
         <br />
         Includes at least one uppercase alphabet character; at least two
@@ -38,13 +46,14 @@
         <br />
         It should include the character “_”
     </div>
+  </div>
 </template>
 
 <script>
 function checkPassword(password) {
     return (
         /^[A-Z]{1}.{7,14}$/.test(password) &&
-        /-/.test(password) &&
+        /_/.test(password) &&
         /[0-9]/.test(password)
     );
 }
@@ -86,55 +95,51 @@ https://www.w3resource.com/javascript/form/password-validation.php */
   width: 60%;
     display: flex;
     flex-direction: column;
-    gap: 1vh; 
+    gap: 1vh;  */
 
   .center-box {
       display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      padding: 0 0; 
+      flex-direction: column;
       justify-content: space-evenly;
+      height: 70%;
+      width: 60%;
+      background-color:#f7ebe4;
+      border-radius: 5px;
+    }
+
+  span {
+    font-size: 20px;
   }
 
-  .content {
-      display: flex;
-      flex-direction:column;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 20px;
-  }
-
-  div strong {
-      color: rgb(0, 0, 0);
-      font-size: 25px;
+  input {
+    font-size: 18px;
+    padding: 5px;
+    margin: 10px;
+    margin-bottom: 25px;
   }
 
   .login-button {
       font-size: 20px;
       margin: 10px 10% 0 25%;
-      background-color: red;
+      background-color: green;
       border: none;
       color: white;
       padding: 10px 20px;
       border-radius: 5px;
+      margin: 30px;
       cursor: pointer;
   }
 
   .login-button:hover {
-      background-color: var(--colorHeaderFooter);
+      background-color: darkgreen;
   }
 
-  .login-button~a {
-      color: crimson;
+  .forErrors {
+ 
+    display: flex;
+    flex-direction: column;
+    
+
   }
 
-  .content p {
-      margin: 25px 0 0 0;
-      
-  }
-
-  p::first-line {
-      font-size:x-large;
-  } */
 </style>
