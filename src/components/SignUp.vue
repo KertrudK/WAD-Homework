@@ -23,7 +23,7 @@
 </template>
   
   <script>
-  import { passwordValidations } from "../services/passwordValidations";
+  import { passwordValidations } from "@/services/passwordValidations.js";
 
   export default {
     name: "SignUp",
@@ -36,7 +36,7 @@
       };
     },
     methods: {
-      formSubmitted() {
+      submitForm() {
         let validations = new passwordValidations(
           this.password
         );
@@ -45,6 +45,7 @@
           return (false);
         }
         else {
+          formSubmitted = true;
           return true;
         }
 

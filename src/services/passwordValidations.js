@@ -39,6 +39,7 @@ export default class passwordValidations {
         if (!this.checkPasswordLetters(password)) {
             errors["lowerUpper"] = errorBad;
         }
+    
         return errors;
     }
 }
