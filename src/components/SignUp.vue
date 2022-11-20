@@ -18,32 +18,33 @@
                 <br />
                 <span>Enter your password</span>
                 <br />
-                <input
-                    v-model="password"
-                    type="password"
-                    placeholder="password"
-                    required
-                />
+                <label>
+                    <input
+                        v-model="password"
+                        type="password"
+                        placeholder="password"
+                        :class="{error: !isValid && formSubmitted}"
+                        required
+                    />
+                    <div class="forErrors" :class="{visible: !isValid && formSubmitted}" id="">
+                            Invalid password.
+                            <br />
+                            Length (at least 8 chars and less than 15 chars).
+                            <br />
+                            Includes at least one uppercase alphabet character;
+                            at least two lowercase alphabet characters;
+                            <br />
+                            at least one numeric value;
+                            <br />
+                            It should start with an uppercase alphabet;
+                            <br />
+                            It should include the character “_”
+                    </div>
+                </label>
+
                 <br />
                 <button class="login-button" type="Submit">Submit</button>
             </form>
-        </div>
-    </div>
-
-    <div class="forErrors" v-if="formSubmitted && !isValid">
-        <div class="center-box">
-            Invalid password.
-            <br />
-            Length (at least 8 chars and less than 15 chars).
-            <br />
-            Includes at least one uppercase alphabet character; at least two
-            lowercase alphabet characters;
-            <br />
-            at least one numeric value;
-            <br />
-            It should start with an uppercase alphabet;
-            <br />
-            It should include the character “_”
         </div>
     </div>
 </template>
@@ -75,6 +76,9 @@ export default {
             this.isValid = checkPassword(this.password);
             if (this.isValid) {
                 window.location.href = "/";
+            }
+            else {
+              setTimeout(() => this.isValid = this.formSubmitted = false, 5000)
             }
         },
     },
@@ -135,7 +139,26 @@ input {
 }
 
 .forErrors {
-    display: flex;
-    flex-direction: column;
+  position: absolute;
+  padding: 20px;
+  right: 200px;
+  min-width: 300px;
+  text-align: left;
+  background-color: white;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.visible {
+  opacity: 1;
+}
+
+.error {
+  transition: border-color 1s;
+  border-color: red;
+}
+
+label {
+  position: relative;
 }
 </style>
