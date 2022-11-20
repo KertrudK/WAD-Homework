@@ -1,66 +1,75 @@
 <template>
-  <!--https://vuejs.org/guide/essentials/forms.html
+    <!--https://vuejs.org/guide/essentials/forms.html
   https://ahmedshaltout.com/vuejs/vue-3-login-with-vuex-tutorial/
   https://www.w3resource.com/javascript/form/password-validation.php
   -->
-  
-<div>
-    <form @submit.prevent="submitForm" v-if="!formSubmitted">
-        <span>Enter your email</span> 
-        <input v-model.trim="email" type = "email" placeholder="email" required/>
-        <span>Enter your password</span>
-        <input v-model="password" type="password" placeholder="password" required/>
-        <button type="Submit">Submit</button>
-      </form> 
+
+    <div>
+        <form @submit.prevent="submitForm">
+            <span>Enter your email</span>
+            <input
+                v-model.trim="email"
+                type="email"
+                placeholder="email"
+                required
+            />
+            <span>Enter your password</span>
+            <input
+                v-model="password"
+                type="password"
+                placeholder="password"
+                required
+            />
+            <button type="Submit">Submit</button>
+        </form>
     </div>
 
-  <div class="forErrors" v-if="formSubmitted">
-        <span>Lovely!</span>
+    <div class="forErrors" v-if="formSubmitted && !isValid">
+        Invalid password.
+        <br />
+        Length (at least 8 chars and less than 15 chars).
+        <br />
+        Includes at least one uppercase alphabet character; at least two
+        lowercase alphabet characters;
+        <br />
+        at least one numeric value;
+        <br />
+        It should start with an uppercase alphabet;
+        <br />
+        It should include the character “_”
     </div>
-
 </template>
-  
-  <script>
 
-    function checkPassword(password) {
-      if (password.length >= 8 && password.length <15)
-      {
-        console.log("correct length")
-        return true
-      }
-      else {
-        return false
-      }
+<script>
+function checkPassword(password) {
+    return (
+        /^[A-Z]{1}.{7,14}$/.test(password) &&
+        /-/.test(password) &&
+        /[0-9]/.test(password)
+    );
+}
 
-    }
-
-  export default {
+export default {
     name: "SignUp",
     data() {
-      return {
-          email: "",
-          password: "",
-          formSubmitted: false
-      };
+        return {
+            email: "",
+            password: "",
+            formSubmitted: false,
+            isValid: false,
+        };
     },
 
     methods: {
-      submitForm() {
-        console.log("submitForm vajutatud")
-          if (checkPassword(this.password)) {
-            console.log("checkPasswordTRUE")
-            this.formSubmitted = true
-          }
-          else {
-            console.log("checkPasswordFALSE")
-            alert("Invalid password.  Length (at least 8 chars and less than 15 chars).  Includes at least one uppercase alphabet character; at least two lowercase alphabet characters;  at least one numeric value; It should start with an uppercase alphabet; It should include the character “_” ")
-            this.formSubmitted = false
-          } 
-        }
-      }
-    }
-
-
+        submitForm() {
+            this.formSubmitted = true;
+            this.isValid = checkPassword(this.password);
+            if (this.isValid) {
+                window.location.href = "/";
+            }
+        },
+    },
+};
 
 /*
  Length (at least 8 chars and less than 15 chars). DONE
@@ -70,20 +79,12 @@
  It should start with an uppercase alphabet.
  It should include the character “_” 
 https://www.w3resource.com/javascript/form/password-validation.php */
+</script>
 
-  </script>
-  
+<style scoped>
 
-  <style scoped>
 
-  .forErrors {
-    display: flex;
-    height: 100px;
-    width: 100px;
-    background-color: yellow;
-  }
-
-  /* TODO later at some point probablymaybe 
+/* TODO later at some point probablymaybe 
   width: 60%;
     display: flex;
     flex-direction: column;
