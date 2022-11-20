@@ -1,6 +1,7 @@
 <template>
   <!--https://vuejs.org/guide/essentials/forms.html
   https://ahmedshaltout.com/vuejs/vue-3-login-with-vuex-tutorial/
+  https://www.w3resource.com/javascript/form/password-validation.php
   -->
   
 <div>
@@ -23,7 +24,17 @@
 </template>
   
   <script>
-  import passwordValidations from "@/services/passwordValidations.js";
+
+    function checkPassword(password) {
+      if (password.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8, 15}$/))
+      {
+        return true
+      }
+      else {
+        return false
+      }
+
+    }
 
   export default {
     name: "SignUp",
@@ -31,30 +42,32 @@
       return {
           email: "",
           password: "",
-          errors: [],
           formSubmitted: false
       };
-    },
-    computed: {
-
     },
 
     methods: {
       submitForm() {
-        let validations = new passwordValidations(
-          this.password
-        );
-        errors = validations.checkEverything(this.password);
-        if (errors.length != 0) {
-          return (false);
+          if (checkPassword(this.password)) {
+            this.formSubmitted = true
+          }
+          else {
+            this.formSubmitted = false
+          } 
         }
-        else {
-          formSubmitted = true;
-        }
-
       }
-      },
-  };
+    }
+
+
+
+/*
+ Length (at least 8 chars and less than 15 chars). DONE
+ Includes at least one uppercase alphabet character. DONE
+ Includes at least two lowercase alphabet characters. IN PROGRESS
+ Includes at least one numeric value.
+ It should start with an uppercase alphabet.
+ It should include the character “_” 
+https://www.w3resource.com/javascript/form/password-validation.php */
 
   </script>
   
