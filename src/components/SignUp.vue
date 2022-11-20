@@ -29,8 +29,12 @@
                     <div
                         class="forErrors"
                         :class="{ visible: !isValid && formSubmitted }"
-                        @click="formSubmitted=isValid=false"
                     >
+                        <span
+                            class="cross"
+                            @click="formSubmitted = isValid = false"
+                            >&#10060;</span
+                        >
                         Invalid password.
                         <br />
                         Length (at least 8 chars and less than 15 chars).
@@ -145,16 +149,23 @@ input {
     left: 200px;
     text-align: left;
     background-color: white;
-    opacity: 0;
-    transition: opacity 1s;
+    display: none;
 }
 
 .visible {
-    opacity: 1;
+    display: block;
 }
 
 .error {
     transition: border-color 1s;
     border-color: red;
+}
+
+.cross {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
 }
 </style>
