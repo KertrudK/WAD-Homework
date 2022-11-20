@@ -29,7 +29,6 @@
                     <div
                         class="forErrors"
                         :class="{ visible: !isValid && formSubmitted }"
-                        id=""
                     >
                         Invalid password.
                         <br />
@@ -147,8 +146,7 @@ input {
 .forErrors {
     position: absolute;
     padding: 20px;
-    right: 200px;
-    min-width: 300px;
+    left: 200px;
     text-align: left;
     background-color: white;
     opacity: 0;
