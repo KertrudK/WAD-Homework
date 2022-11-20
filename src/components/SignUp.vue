@@ -137,11 +137,15 @@ input {
     margin: 20px;
     text-align: left;
     background-color: white;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 .visible {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .5s linear;
 }
 
 .error {
