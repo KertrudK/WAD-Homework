@@ -22,11 +22,19 @@
   
   <script>
 
+/*https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes*/
     function checkPassword(password) {
       if (password.length >= 8 && password.length <15)
-      {
-        console.log("correct length")
-        return true
+        {console.log("correct length")
+        if (password.match(/[a-z]+[A-Z]+/)) {
+          console.log("has upper&lower")
+          if(password.match(/\d/)) {
+            console.log("has number")
+          }
+          return true
+        }
+        
+
       }
       else {
         return false
