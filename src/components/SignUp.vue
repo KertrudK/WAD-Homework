@@ -27,26 +27,30 @@
             />
             <br/>
             <button class="login-button" type="Submit">Submit</button>
-        </form>
+            
+            <div class="forErrors" v-if="formSubmitted && !isValid">
+
+                Password requirements:
+                <br/>
+                Length is at least 8 and less than 15 characters.
+                <br />
+                Includes at least one uppercase alphabet character and at least two
+                lowercase alphabet characters.
+                <br />
+                Includest least one numeric value.
+                <br />
+                It should start with an uppercase alphabet.
+                <br />
+                Includes the character “_”
+
+                </div>
+          </form>
       </div>
+      
     </div>
 
-    <div class="forErrors" v-if="formSubmitted && !isValid">
-      <div class="center-box">
-        Invalid password.
-        <br/>
-        Length (at least 8 chars and less than 15 chars).
-        <br />
-        Includes at least one uppercase alphabet character; at least two
-        lowercase alphabet characters;
-        <br />
-        at least one numeric value;
-        <br />
-        It should start with an uppercase alphabet;
-        <br />
-        It should include the character “_”
-    </div>
-  </div>
+
+
 </template>
 
 <script>
@@ -101,7 +105,7 @@ https://www.w3resource.com/javascript/form/password-validation.php */
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      height: 70%;
+      height: 90%;
       width: 60%;
       background-color:#f7ebe4;
       border-radius: 5px;
@@ -135,11 +139,10 @@ https://www.w3resource.com/javascript/form/password-validation.php */
   }
 
   .forErrors {
- 
     display: flex;
+    width: 100%;
     flex-direction: column;
-    
-
+    font-size: 16px;
   }
 
 </style>
