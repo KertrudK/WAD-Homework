@@ -40,7 +40,7 @@
       return {
           email: "",
           password: "",
-
+          formSubmitted: false
       };
     },
 
