@@ -4,49 +4,47 @@
   https://www.w3resource.com/javascript/form/password-validation.php
   -->
 
-
-      <div class="home">
+    <div class="home">
         <div class="center-box">
-        <form @submit.prevent="submitForm">
-            <span>Enter your email</span>
-            <br/>
-            <input
-                v-model.trim="email"
-                type="email"
-                placeholder="email"
-                required
-            />
-            <br/>
-            <span>Enter your password</span>
-            <br/>
-            <input
-                v-model="password"
-                type="password"
-                placeholder="password"
-                required
-            />
-            <br/>
-            <button class="login-button" type="Submit">Submit</button>
-            
-            <div class="forErrors" v-if="formSubmitted && !isValid">
+            <form @submit.prevent="submitForm">
+                <span>Enter your email</span>
+                <br />
+                <input
+                    v-model.trim="email"
+                    type="email"
+                    placeholder="email"
+                    required
+                />
+                <br />
+                <span>Enter your password</span>
+                <br />
+                <input
+                    v-model="password"
+                    type="password"
+                    placeholder="password"
+                    required
+                />
+                <br />
+                <button class="login-button" type="Submit">Submit</button>
+            </form>
+        </div>
+    </div>
 
-                Password requirements:
-                <br/>
-                Length is at least 8 and less than 15 characters.
-                <br />
-                Includes at least one uppercase alphabet character and at least two
-                lowercase alphabet characters.
-                <br />
-                Includest least one numeric value.
-                <br />
-                It should start with an uppercase alphabet.
-                <br />
-                Includes the character “_”
-
-                </div>
-          </form>
-      </div>
-      
+    <div class="forErrors" v-if="formSubmitted && !isValid">
+        <div class="center-box">
+            Invalid password.
+            <br />
+            Length (at least 8 chars and less than 15 chars).
+            <br />
+            Includes at least one uppercase alphabet character; at least two
+            lowercase alphabet characters;
+            <br />
+            at least one numeric value;
+            <br />
+            It should start with an uppercase alphabet;
+            <br />
+            It should include the character “_”
+        </div>
     </div>
 
 
@@ -56,9 +54,10 @@
 <script>
 function checkPassword(password) {
     return (
-        /^[A-Z]{1}.{7,14}$/.test(password) &&
+        /^[A-Z]{1}.{7,13}$/.test(password) &&
         /_/.test(password) &&
-        /[0-9]/.test(password)
+        /[0-9]/.test(password) &&
+        /[a-z]/.test(password)
     );
 }
 
@@ -111,32 +110,32 @@ https://www.w3resource.com/javascript/form/password-validation.php */
       border-radius: 5px;
     }
 
-  span {
+span {
     font-size: 20px;
-  }
+}
 
-  input {
+input {
     font-size: 18px;
     padding: 5px;
     margin: 10px;
     margin-bottom: 25px;
-  }
+}
 
-  .login-button {
-      font-size: 20px;
-      margin: 10px 10% 0 25%;
-      background-color: green;
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      margin: 30px;
-      cursor: pointer;
-  }
+.login-button {
+    font-size: 20px;
+    margin: 10px 10% 0 25%;
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 30px;
+    cursor: pointer;
+}
 
-  .login-button:hover {
-      background-color: darkgreen;
-  }
+.login-button:hover {
+    background-color: darkgreen;
+}
 
   .forErrors {
     display: flex;
