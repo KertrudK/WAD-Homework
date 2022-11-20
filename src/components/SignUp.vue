@@ -23,22 +23,26 @@
                         v-model="password"
                         type="password"
                         placeholder="password"
-                        :class="{error: !isValid && formSubmitted}"
+                        :class="{ error: !isValid && formSubmitted }"
                         required
                     />
-                    <div class="forErrors" :class="{visible: !isValid && formSubmitted}" id="">
-                            Invalid password.
-                            <br />
-                            Length (at least 8 chars and less than 15 chars).
-                            <br />
-                            Includes at least one uppercase alphabet character;
-                            at least two lowercase alphabet characters;
-                            <br />
-                            at least one numeric value;
-                            <br />
-                            It should start with an uppercase alphabet;
-                            <br />
-                            It should include the character “_”
+                    <div
+                        class="forErrors"
+                        :class="{ visible: !isValid && formSubmitted }"
+                        id=""
+                    >
+                        Invalid password.
+                        <br />
+                        Length (at least 8 chars and less than 15 chars).
+                        <br />
+                        Includes at least one uppercase alphabet character; at
+                        least two lowercase alphabet characters;
+                        <br />
+                        at least one numeric value;
+                        <br />
+                        It should start with an uppercase alphabet;
+                        <br />
+                        It should include the character “_”
                     </div>
                 </label>
 
@@ -76,9 +80,11 @@ export default {
             this.isValid = checkPassword(this.password);
             if (this.isValid) {
                 window.location.href = "/";
-            }
-            else {
-              setTimeout(() => this.isValid = this.formSubmitted = false, 5000)
+            } else {
+                setTimeout(
+                    () => (this.isValid = this.formSubmitted = false),
+                    5000
+                );
             }
         },
     },
@@ -105,7 +111,7 @@ https://www.w3resource.com/javascript/form/password-validation.php */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    height: 70%;
+    height: 90%;
     width: 60%;
     background-color: #f7ebe4;
     border-radius: 5px;
@@ -139,26 +145,22 @@ input {
 }
 
 .forErrors {
-  position: absolute;
-  padding: 20px;
-  right: 200px;
-  min-width: 300px;
-  text-align: left;
-  background-color: white;
-  opacity: 0;
-  transition: opacity 1s;
+    position: absolute;
+    padding: 20px;
+    right: 200px;
+    min-width: 300px;
+    text-align: left;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 1s;
 }
 
 .visible {
-  opacity: 1;
+    opacity: 1;
 }
 
 .error {
-  transition: border-color 1s;
-  border-color: red;
-}
-
-label {
-  position: relative;
+    transition: border-color 1s;
+    border-color: red;
 }
 </style>
