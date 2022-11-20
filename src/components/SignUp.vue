@@ -29,6 +29,7 @@
                     <div
                         class="forErrors"
                         :class="{ visible: !isValid && formSubmitted }"
+                        @click="formSubmitted=isValid=false"
                     >
                         Invalid password.
                         <br />
@@ -79,11 +80,6 @@ export default {
             this.isValid = checkPassword(this.password);
             if (this.isValid) {
                 window.location.href = "/";
-            } else {
-                setTimeout(
-                    () => (this.isValid = this.formSubmitted = false),
-                    5000
-                );
             }
         },
     },
