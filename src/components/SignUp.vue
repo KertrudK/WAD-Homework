@@ -9,25 +9,23 @@
         <span>Enter your email</span> 
         <input v-model.trim="email" type = "email" placeholder="email" required/>
         <span>Enter your password</span>
-        <input v-model="text" type="password" placeholder="password" required/>
+        <input v-model="password" type="password" placeholder="password" required/>
         <button type="Submit">Submit</button>
       </form> 
     </div>
 
-  <div v-if="formSubmitted">
+  <div class="forErrors" v-if="formSubmitted">
         <span>Lovely!</span>
     </div>
-  <div v-if="!formSubmitted">
-      <span>I have to show errors here somehow</span> <!-- TODO -->
-  </div>
 
 </template>
   
   <script>
 
     function checkPassword(password) {
-      if (password.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8, 15}$/))
+      if (password.length >= 8 && password.length <15)
       {
+        console.log("correct length")
         return true
       }
       else {
@@ -42,16 +40,20 @@
       return {
           email: "",
           password: "",
-          formSubmitted: false
+
       };
     },
 
     methods: {
       submitForm() {
+        console.log("submitForm vajutatud")
           if (checkPassword(this.password)) {
+            console.log("checkPasswordTRUE")
             this.formSubmitted = true
           }
           else {
+            console.log("checkPasswordFALSE")
+            alert("Invalid password.  Length (at least 8 chars and less than 15 chars).  Includes at least one uppercase alphabet character; at least two lowercase alphabet characters;  at least one numeric value; It should start with an uppercase alphabet; It should include the character “_” ")
             this.formSubmitted = false
           } 
         }
@@ -62,8 +64,8 @@
 
 /*
  Length (at least 8 chars and less than 15 chars). DONE
- Includes at least one uppercase alphabet character. DONE
- Includes at least two lowercase alphabet characters. IN PROGRESS
+ Includes at least one uppercase alphabet character. 
+ Includes at least two lowercase alphabet characters. 
  Includes at least one numeric value.
  It should start with an uppercase alphabet.
  It should include the character “_” 
@@ -73,6 +75,13 @@ https://www.w3resource.com/javascript/form/password-validation.php */
   
 
   <style scoped>
+
+  .forErrors {
+    display: flex;
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+  }
 
   /* TODO later at some point probablymaybe 
   width: 60%;
