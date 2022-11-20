@@ -17,7 +17,7 @@
   <div v-if="formSubmitted">
         <span>Lovely!</span>
     </div>
-  <div v-if!="formSubmitted">
+  <div v-if="!formSubmitted">
       <span>I have to show errors here somehow</span> <!-- TODO -->
   </div>
 
