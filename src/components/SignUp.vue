@@ -82,8 +82,6 @@ https://www.w3resource.com/javascript/form/password-validation.php */
 </script>
 
 <style scoped>
-
-
 /* TODO later at some point probablymaybe 
   width: 60%;
     display: flex;
