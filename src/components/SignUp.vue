@@ -4,57 +4,57 @@
   https://www.w3resource.com/javascript/form/password-validation.php
   -->
 
-
-      <div class="home">
+    <div class="home">
         <div class="center-box">
-        <form @submit.prevent="submitForm">
-            <span>Enter your email</span>
-            <br/>
-            <input
-                v-model.trim="email"
-                type="email"
-                placeholder="email"
-                required
-            />
-            <br/>
-            <span>Enter your password</span>
-            <br/>
-            <input
-                v-model="password"
-                type="password"
-                placeholder="password"
-                required
-            />
-            <br/>
-            <button class="login-button" type="Submit">Submit</button>
-        </form>
-      </div>
+            <form @submit.prevent="submitForm">
+                <span>Enter your email</span>
+                <br />
+                <input
+                    v-model.trim="email"
+                    type="email"
+                    placeholder="email"
+                    required
+                />
+                <br />
+                <span>Enter your password</span>
+                <br />
+                <input
+                    v-model="password"
+                    type="password"
+                    placeholder="password"
+                    required
+                />
+                <br />
+                <button class="login-button" type="Submit">Submit</button>
+            </form>
+        </div>
     </div>
 
     <div class="forErrors" v-if="formSubmitted && !isValid">
-      <div class="center-box">
-        Invalid password.
-        <br/>
-        Length (at least 8 chars and less than 15 chars).
-        <br />
-        Includes at least one uppercase alphabet character; at least two
-        lowercase alphabet characters;
-        <br />
-        at least one numeric value;
-        <br />
-        It should start with an uppercase alphabet;
-        <br />
-        It should include the character “_”
+        <div class="center-box">
+            Invalid password.
+            <br />
+            Length (at least 8 chars and less than 15 chars).
+            <br />
+            Includes at least one uppercase alphabet character; at least two
+            lowercase alphabet characters;
+            <br />
+            at least one numeric value;
+            <br />
+            It should start with an uppercase alphabet;
+            <br />
+            It should include the character “_”
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
 function checkPassword(password) {
     return (
-        /^[A-Z]{1}.{7,14}$/.test(password) &&
+        /^[A-Z]{1}.{7,13}$/.test(password) &&
         /_/.test(password) &&
-        /[0-9]/.test(password)
+        /[0-9]/.test(password) &&
+        /[a-z]/.test(password)
     );
 }
 
@@ -97,49 +97,45 @@ https://www.w3resource.com/javascript/form/password-validation.php */
     flex-direction: column;
     gap: 1vh;  */
 
-  .center-box {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      height: 70%;
-      width: 60%;
-      background-color:#f7ebe4;
-      border-radius: 5px;
-    }
+.center-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 70%;
+    width: 60%;
+    background-color: #f7ebe4;
+    border-radius: 5px;
+}
 
-  span {
+span {
     font-size: 20px;
-  }
+}
 
-  input {
+input {
     font-size: 18px;
     padding: 5px;
     margin: 10px;
     margin-bottom: 25px;
-  }
+}
 
-  .login-button {
-      font-size: 20px;
-      margin: 10px 10% 0 25%;
-      background-color: green;
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      margin: 30px;
-      cursor: pointer;
-  }
+.login-button {
+    font-size: 20px;
+    margin: 10px 10% 0 25%;
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 30px;
+    cursor: pointer;
+}
 
-  .login-button:hover {
-      background-color: darkgreen;
-  }
+.login-button:hover {
+    background-color: darkgreen;
+}
 
-  .forErrors {
- 
+.forErrors {
     display: flex;
     flex-direction: column;
-    
-
-  }
-
+}
 </style>
